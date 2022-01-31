@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asincronica</title>
+</head>
+<body>
+    <h1>Asincronica en Javascript</h1>
+
+    <script>
+        /*console.log("Inicio");*/
+
+
+        /*setTimeout(() => {
+            console.log("Ejecutando un setTimeout, esto se ejecuta solo una vez");
+        },3000)*/
+
+
+        /*setInterval(() => {
+            console.log("Ejecutando un setInterval, esto se ejecuta indefinidamente");
+        }, 1000);*/
+
+        /*let temporizador = setTimeout(() => {
+            console.log(new Date().toLocaleTimeString());
+        }, 8000);
+
+        clearTimeout(temporizador);*/
+
+        /*let temporizador = setInterval(() => {
+            console.log(new Date().toLocaleTimeString());
+        }, 8000);
+
+        clearInterval(temporizador);
+        console.log("Despues del clareaInterval");*/
+
+
+        function cuadradoCallback(value,callback){
+            setTimeout(() => {
+                callback(value, value * value);
+            }, 0 | Math.random() * 1000);
+        }
+
+
+        cuadradoCallback(0,(value, result) => {
+            console.log("Inicia Callback");
+            console.log(`Callback: ${value}, ${result}`);
+            cuadradoCallback(1,(value, result) => {
+            console.log("Inicia Callback");
+            console.log(`Callback: ${value}, ${result}`);
+            cuadradoCallback(2,(value, result) => {
+            console.log("Inicia Callback");
+            console.log(`Callback: ${value}, ${result}`);
+            cuadradoCallback(3,(value, result) => {
+            console.log("Inicia Callback");
+            console.log(`Callback: ${value}, ${result}`);
+            
+            
+        });
+            
+            
+        });
+            
+            
+        });
+        });
+
+
+    </script>
+</body>
+</html>

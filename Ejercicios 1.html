@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio</title>
+</head>
+<body>
+    <script defer>
+
+        //ejercicio #1
+
+        function lerr(letras = "Hola mundo"){
+            
+                console.log(`la palabra ${letras} tiene ${letras.length} caracter`);
+            
+
+        }
+
+        lerr();
+        
+
+        //ejercicio #2
+
+
+        const recortar = (texto = "",longitud = undefined) =>
+        console.info(texto.slice(0,longitud));
+
+        recortar("Hola Mundo",4);
+
+        //var cadena = "HOLA MUNDO"
+
+        //console.log("(0,4):" + cadena.substr(0,4));
+
+        //ejercicio #3
+
+        const cadenaAArreglo = (cadena = "", separador = undefined) =>
+        console.info(cadena.split(separador));
+
+        cadenaAArreglo("Hola que tal","")
+        
+
+        //ultimo
+
+        function repetir(d){
+  console.log(d+d+d)
+
+}
+let d = "Hola Mundo  ";
+repetir(d);
+
+
+const repetirCaja = (caja = "",veces = undefined) =>{
+    
+
+
+    for (let i = 1; i <= veces; i++) console.info(`${caja},${i}`) 
+    
+
+}
+
+
+repetir("Hola Mundo ",3)
+
+// Invertir palabras
+
+function reverse(s){
+    return s.split("").reverse().join("");
+}
+
+var sss = reverse("Hola Mundo")
+console.log(sss)
+
+
+const invertirTexto = (texto = "") => console.log(texto.split("").reverse().join(""));
+
+
+
+invertirTexto("Hola Mundo");
+
+//Ejercicio 6
+
+
+const contar = (malo,bueno) => malo.match(new RegExp(bueno,'g')).length
+
+console.log(contar('Hola mundo adios mundo', 'mundo'));
+
+//Ejercicio 7
+
+function palindrome(ira) {
+  const iraReversed = ira.split("").reverse().join("")
+
+  return iraReversed === ira ? "La palabra ingresada es correcta" : "La palabra ingresada es incorrecta"
+}
+console.log(palindrome("oso")) // es palindromo
+console.log(palindrome("hola")) // no es palindromo
+console.log(palindrome("salas")) // es palindromo
+
+
+
+// ejercicio 8
+
+
+const quitar = (muchas, pocas) => muchas.replaceAll(new RegExp(pocas, 'g'), '')
+console.log(quitar('xyz1, xyz2, xyz3, xyz4 y xyz5', 'xyz'));
+
+
+//ejercicio 9
+
+const numeroAleatorio = () => Math.round(Math.random()*100 + 501);
+
+console.log(numeroAleatorio());
+
+
+//ejercicio 
+
+const capicua = (numero) =>
+
+(Number.isInteger(numero) && numero.toString().split("").reverse().join("") === numero.toString())
+
+    ? true
+
+    : false;
+
+/* Pruebas */
+
+console.log(capicua(123));
+
+console.log(capicua(2002));
+
+console.log(capicua());
+
+console.log(capicua("abc"));
+
+        
+
+      
+
+
+        
+        
+   
+
+    </script>
+</body>
+</html>

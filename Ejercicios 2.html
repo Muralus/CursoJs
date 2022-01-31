@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script defer>
+        // Invertir texto
+
+        const invertir = (cadena = "") => console.log(cadena.split("").reverse().join(""));
+
+        invertir("Hola solpa pokkas");
+
+        const lerr = (lei = "") => console.log(`la palabra ${lei} consta de ${lei.length} palabras`);
+
+        lerr("Hola Mundo");
+
+        const lirr = (lai = "", separador = undefined) => console.log(lai.split(separador));
+
+
+        lirr("Hola Mundo","")
+
+        const larr = (lii = "") => console.log(lii.slice(0,4));
+
+        larr("Hola Mundo")
+
+        const lurr = (loo = "") => console.log(loo.repeat( 3));
+
+        lurr("Hola mundo ")
+
+        const lorr = (loo,las) => loo.match(new RegExp(las,'ig')).length
+
+        console.log(lorr("Hola mundo soy el mundo","Mundo"));
+
+
+        function marr(lars){
+            const mors = lars.split("").reverse().join("")
+
+            return mors === lars ? true : false
+        }
+
+        console.log(marr("oso"));
+        console.log(marr("loga"));
+        console.log(marr("lool"));
+        console.log(marr("popo"));
+
+
+
+        const quitar = (los, las) => los.replaceAll(new RegExp(las,'ig'), '');
+
+        console.log(quitar("zyx1 zyx2 ZYX3 ZYX4 Y Zyx5 ","zyx"));
+
+
+       const aleatorio = () => Math.round(Math.random()*(600-501)+501)
+
+       console.log(aleatorio());
+
+
+       function mors(numeros){
+
+        const murs = numeros.split("").reverse().join("")
+        return murs === numeros ? "True" : "False"
+
+    }
+
+    console.log(mors("2002"));
+
+    const capicua = (numero) =>
+
+    (Number.isInteger(numero) && numero.toString().split("").reverse().join("")===numero.toString())
+
+    ? true
+    : false;
+
+
+    console.log(capicua(2002));
+    console.log(capicua(0202));
+
+
+
+
+const factorial = (numero) => {
+
+    let factor = 1;{
+
+        for (let cont = 1; cont < numero; cont++) 
+        factor += factor * cont         
+        }
+
+        return factor;
+    
+}
+
+
+console.log(factorial(8));
+
+
+
+/*function primos(num){
+    for (let i = 2; i < num; i++) {
+        if(num%i==0){
+            return false;
+        }
+        
+    };
+
+    return true;
+}
+
+console.log(primos(6));*/
+
+
+
+
+
+
+
+const primos = (num) => {
+    for (let i = 2; i < num; i++) {
+        
+        if(num%i==0){
+            return false;
+        }
+    };
+
+    return true
+}
+
+console.log(primos(3));
+
+
+
+function parImpar(numi){
+    if(numi%2 ==0){
+        return "Par"
+    }else{
+        return "Impar"
+    }
+}
+
+
+console.log(parImpar(35));
+
+
+
+function convertir(celcius) {
+    let fahrenheit;
+
+    fahrenheit = (celcius * 9/5) + 32;
+
+    return fahrenheit ; 
+
+}
+
+console.log(convertir(0));
+
+
+function descuento(umi = 0,por){
+   let resultado;
+   let totalAPagar;
+
+   resultado = (umi * por)/100;
+   totalAPagar = (umi - resultado)
+
+
+   return totalAPagar;
+}
+
+console.log(descuento(1000,19));
+
+
+const porcntaje = (valor=0,port) => {
+    let resultado;
+    let aPagar;
+
+    resultado = (valor * port)/100;
+    aPagar = (valor - resultado);
+
+    return aPagar;
+}
+
+console.log(porcntaje(1000,20));
+
+
+
+
+
+
+const añosDesde = (fecha) => {
+            let hoy = new Date();
+            return hoy.getFullYear() - fecha.getFullYear();
+        }
+
+
+        let cumple = new Date(1995,12,08)
+
+        console.log(añosDesde(cumple));
+
+
+
+
+    const vocales =(jun=0)=>jun.replace(/[^aeiou]/gi,'').length;
+
+    const cons =(jun= 0)=>jun.replace(/[^bdfghijklmnñopqrstvxyz]/g,'').length;
+
+
+
+console.log(`Vocales: ${vocales("Hola Mundo")} Consonantes ${cons("Hola Mundo")}`)
+
+
+
+
+const nombreValido = (cadena = "") => 
+	 console.log(/^([A-Z][a-z]{1,30}\s?)+$/.test(cadena) ? true : false)
+
+nombreValido('Katherine Estrada')
+
+
+
+const emailValido = (cadena = null) => {
+
+	return console.log(cadena.length < 30 && /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(cadena) ? true : false)
+}
+
+emailValido('juestrada.mura@gmail.com')
+
+
+
+const usj = (jsu = "") => console.log(jsu.split("").reverse().join(""));
+
+usj("Hola Mundo") 
+
+
+
+
+
+
+const arregloAlCuadrado =(arreglo=undefined)=>{
+
+
+for (let i = 0; i < arreglo.length; i++) {
+
+    if(typeof arreglo[i] !== "number") {
+}
+
+}
+
+//console.log(arreglo);
+
+let resultadoArreglo=[];
+
+for (let numero of arreglo) {
+
+    resultadoArreglo.push(Math.pow(numero,2))
+
+}
+
+return console.log(resultadoArreglo);
+
+}
+
+arregloAlCuadrado([1,4,5]);
+
+
+
+const aja = (kass = "") => console.log(kass.split("").reverse().join(""));
+
+aja("Hola Mundo")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

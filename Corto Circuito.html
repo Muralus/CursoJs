@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obejtos Math</title>
+</head>
+<body>
+    <script defer>
+        function saludar(nombre){
+        nombre = nombre || "Desconocido"
+        console.log(`Hola ${nombre}`);
+        }
+        console.log();
+        saludar("Juan")
+        saludar();
+
+        console.log("Cadena" || "Valor de la derecha");
+        console.log(19 || "Valor de la derecha");
+        console.log(false || "Valor de la derecha");
+        console.log(null || "Valor de la derecha");
+        console.log(-2|| "Valor de la derecha");
+        console.log(0 || "Valor de la derecha");
+
+        console.log(19 && "Valor de la derecha");
+
+    </script>
+</body>
+</html>

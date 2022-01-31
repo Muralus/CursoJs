@@ -1,0 +1,11 @@
+{
+    "cadena": "Juan",
+    "numero": 35,
+    "booleano": true,
+    "arreglo": ["comer","programar", "cocina"],
+    "objeto": {
+        "twitter": "@Estrada.mura",
+        "email": "Juanestrada.mura@gmail.com"
+    }
+     
+}

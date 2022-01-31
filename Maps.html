@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asincronica</title>
+</head>
+<body>
+    <h1>Tipos de simobolos</h1>
+
+    <script>
+    /*let id = Symbol("id");
+    let id2 = Symbol("id2");
+
+
+    console.log(id === id2);
+    console.log(id,id2);
+    console.log(typeof id,typeof id2);
+
+    const NOMBRE = Symbol("nombre");
+    const SALUDAR = Symbol("saludar");
+
+    const persona = {
+        [NOMBRE] : "Jon",
+
+        edad: 35
+    };
+
+
+    console.log(persona);
+
+    persona.NOMBRE = "Juan Estrada "
+    console.log(persona);
+    console.log(persona.NOMBRE);
+    console.log(persona[NOMBRE]);
+    
+
+    persona[SALUDAR] = function() {
+        console.log(`Hola`);
+    }
+
+    console.log(persona);
+    persona[SALUDAR]();
+
+    for (let propiedad in persona){
+        console.log(propiedad);
+        console.log(persona[propiedad]);
+    }
+
+    console.log(Object.getOwnPropertySymbols(persona));*/
+
+
+    /*const set = new Set([1,2,3,4,5,true,false,false,{},{},"hola","HOLA"])
+
+    console.log(set);
+    console.log(set.size);
+
+
+    const set2 = new Set();
+
+    set2.add(1);
+    set2.add(1);
+    set2.add(1);
+    set2.add(1);
+    set2.add(1);
+
+    console.log(set2);
+  
+
+    for (item of set){
+        console.log(item);
+    }
+     set2.forEach(item => console.log((item)));
+
+
+     let arr = Array.from(set);
+
+     console.log(arr);
+     console.log(arr[5]);
+
+     set.delete(5)
+     console.log(set);*/
+
+
+     let mapa = new Map();
+     mapa.set("Nombre","Juan");
+     mapa.set("Apellido","Estrada");
+     mapa.set("Edad",25);
+
+     console.log(mapa);
+     console.log(mapa.size);
+     console.log(mapa.has("correo"));
+     console.log(mapa.has("Edad"));
+     console.log(mapa.get("Edad"));
+     mapa.set("Nombre","Juan Estrada")
+     console.log(mapa.get("Nombre"));
+     mapa.delete("Apellido");
+
+     mapa.set(19,"diecinueve");
+     mapa.set(false,"false");
+     mapa.set({},{});
+     
+
+     console.log(mapa);
+
+     for (let [key,value] of mapa){
+         console.log(`Llave: ${key}, Valor: ${value}`);
+     }
+
+
+     const mapa2 = new Map([
+         ["Nombre","Kira"],
+         ["Edad",7],
+         ["Animal","Perro"],
+         [null,"Nulo"]
+     ])
+
+     console.log(mapa2);
+
+
+     const mapa3 = new Map([
+         ["Vida",8],
+         ["Resistencia",7]
+     ])
+
+     console.log(mapa3);
+
+
+     const llavesMapa2 = [...mapa2.keys()];
+     const valoresMapa3 = [...mapa3.keys()];
+
+     console.log(llavesMapa2);
+     console.log(valoresMapa3);
+
+
+
+
+
+
+    </script>
+</body>
+</html>
